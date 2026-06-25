@@ -1,0 +1,453 @@
+/* =========================================
+        A.M DIGITAL HEALTH HUB WEB CODE
+   ========================================= */
+
+:root {
+  --primary-color: #003366; 
+  --secondary-color: #007bff; 
+  --accent-color: #ffcc00; 
+  --text-dark: #333333;
+  --text-light: #666666;
+  --bg-color: #ffffff;
+  --bg-light: #f8f9fa;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 5%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* --- HEADER --- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-color);
+  padding: 15px 5%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+
+/* --- ACTIVE LINK STYLING --- */
+nav ul li a.active-link {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 4px;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  height: 80vh;
+  background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('assets/office-bg.png') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: var(--accent-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+
+.hero-btn:hover {
+  background: white;
+}
+
+/* --- GRIDS --- */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* --- CARDS --- */
+.card, .testimonial-card {
+  background: white;
+  padding: 40px 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.card h3, .testimonial-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.testimonial-card span {
+  display: block;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.testimonial-card p {
+  font-style: italic;
+}
+
+/* --- METRICS --- */
+.metric-box h2 {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.metric-box p {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* --- PORTFOLIO GALLERY --- */
+.portfolio-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* --- PARTNERS --- */
+.partners-logo-placeholder {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.partners-logo-placeholder span {
+  padding: 20px 40px;
+  background: white;
+  border: 1px solid #ddd;
+  font-weight: bold;
+  color: #ccc;
+}
+
+/* --- CTA BANNER --- */
+.cta-banner {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 5%;
+}
+
+.cta-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-banner p {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+  background: #111;
+  color: white;
+  padding: 60px 5% 20px 5%;
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+}
+
+.social-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* --- WHATSAPP --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+.whatsapp-float img {
+  width: 35px;
+}
+
+/* --- MOBILE MENU (HAMBURGER) --- */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+  border-radius: 3px;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row; /* Keep logo and hamburger on the same line */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: relative; /* Needed for the dropdown menu */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show the hamburger on mobile */
+  }
+
+  nav {
+    width: 100%;
+    position: absolute;
+    top: 100%; /* Position it right below the header */
+    left: 0;
+    background: var(--bg-color);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    display: none; /* Hide the menu by default */
+  }
+
+  /* This class will be added by JavaScript when the button is clicked */
+  nav.active {
+    display: block; 
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    gap: 20px;
+  }
+
+  /* Animate the hamburger into an 'X' */
+  .menu-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  
+  /* --- SCROLL REVEAL ANIMATION --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px); /* Pushes the element down slightly */
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Smooth easing */
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0); /* Brings it back to its original position */
+}
+
+
+  /* Adjust other sections for mobile */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .main-footer .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+
+/* =========================================
+   PARTNERS INFINITE SCROLL ANIMATION
+   ========================================= */
+.partners-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 30px 0;
+  white-space: nowrap;
+}
+
+/* Faded white edges for a premium look */
+.partners-slider::before,
+.partners-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+}
+.partners-slider::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+.partners-slider::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.partners-track {
+  display: inline-block;
+  /* Adjust '20s' to make it scroll faster or slower */
+  animation: scrollLogos 20s linear infinite; 
+}
+
+/* Pause the scrolling when the mouse hovers over it */
+.partners-slider:hover .partners-track {
+  animation-play-state: paused;
+}
+
+.partners-track img {
+  height: 60px;
+  margin: 0 40px; /* Space between logos */
+  object-fit: contain;
+  vertical-align: middle;
+  filter: grayscale(100%); /* Makes all logos grey for a clean corporate look */
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Pop into full color and zoom slightly on hover */
+.partners-track img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+/* =========================================
+   NEW ANIMATIONS: PULSE & HOVER LIFT
+   ========================================= */
+
+/* Subtle continuous pulse for main buttons */
+.pulse-btn {
+  animation: shadowPulse 2s infinite;
+}
+
+@keyframes shadowPulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(0, 123, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+}
+
+/* Smooth lift effect for cards and project images */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure project images stay neat when lifting */
+.portfolio-grid img.hover-lift {
+  border-radius: 8px;
+  cursor: pointer;
+}
